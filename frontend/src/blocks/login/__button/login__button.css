@@ -1,0 +1,17 @@
+.login__button {
+  width: 358px;
+  height: 50px;
+  margin: 216px auto 0;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.login__button:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+@media screen and (max-width: 576px) {
+  .login__button {
+    width: 260px;
+  }
+}

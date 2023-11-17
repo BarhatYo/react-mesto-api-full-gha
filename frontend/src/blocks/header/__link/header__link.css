@@ -1,0 +1,18 @@
+.header__link {
+  margin: 0;
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  max-height: 25px;
+  cursor: pointer;
+}
+
+.header__link:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media screen and (max-width: 992px) {
+  .header__link {
+    margin-right: calc((100vw - 320px)/(992 - 320) * (145.7 - 27) + 27px);
+  }
+}

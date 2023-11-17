@@ -1,0 +1,10 @@
+.not-found__link {
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.not-found__link:hover {
+  color: rgba(255, 255, 255, 0.6);
+}

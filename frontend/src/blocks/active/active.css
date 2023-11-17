@@ -1,0 +1,13 @@
+.header-mobile__burger-line.active {
+  transform: scale(0);
+}
+
+.header-mobile__burger.active::after {
+  top: 50%;
+  transform: rotate(-45deg) translate(0, -50%);
+}
+
+.header-mobile__burger.active::before {
+  bottom: 46%;
+  transform: rotate(45deg) translate(0, 50%);
+}

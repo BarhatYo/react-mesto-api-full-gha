@@ -1,0 +1,5 @@
+.element__heart-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}

@@ -1,0 +1,33 @@
+.header-mobile__burger {
+  display: none;
+  cursor: pointer;
+  height: 21px;
+  position: relative;
+  justify-content: column;
+  align-items: center;
+  margin-right: calc((100vw - 320px) / (992 - 320) * (145.7 - 27) + 27px);
+}
+
+.header-mobile__burger::after,
+.header-mobile__burger::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.header-mobile__burger::after {
+  top: 0;
+}
+
+.header-mobile__burger::before {
+  bottom: 0;
+}
+
+@media screen and (max-width: 900px) {
+  .header-mobile__burger {
+    display: flex;
+  }
+}

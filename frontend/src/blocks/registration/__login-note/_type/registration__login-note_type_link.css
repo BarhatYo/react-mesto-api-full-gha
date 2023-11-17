@@ -1,0 +1,9 @@
+.registration__login-note_type_link {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.registration__login-note_type_link:hover {
+  color: rgba(255, 255, 255, 0.6);
+}

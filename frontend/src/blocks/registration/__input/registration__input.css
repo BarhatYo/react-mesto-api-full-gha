@@ -1,0 +1,21 @@
+.registration__input {
+  width: 358px;
+  height: 14px;
+  padding-bottom: 12px;
+  border: 0;
+  border-bottom: 2px solid #fff;
+  background-color: transparent;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 14px;
+}
+
+.registration__input::placeholder {
+  color: #ccc;
+}
+
+@media screen and (max-width: 576px) {
+  .registration__input {
+    width: 260px;
+  }
+}
