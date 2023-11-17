@@ -16,7 +16,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "npm run build && scp -r ./build/* barkhatos@158.160.129.186:/home/barkhatos/react-mesto-api-full-gha/frontend"
   },
   "eslintConfig": {
     "extends": [

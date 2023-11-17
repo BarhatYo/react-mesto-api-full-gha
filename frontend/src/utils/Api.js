@@ -96,7 +96,8 @@ class Api {
 }
 
 const api = new Api({
-  baseUrl: "http://127.0.0.1:3001",
+  // baseUrl: "http://127.0.0.1:3001",
+  baseUrl: "https://api.barkhatos.nomoredomainsicu.ru",
 });
 
 export default api;
