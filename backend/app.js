@@ -14,7 +14,7 @@ const app = express();
 const { PORT = 3000, MONGO_URL = 'mongodb://127.0.0.1:/27017/mestodb' } = process.env;
 app.use(
   cors({
-    origin: ['https://barkhatos.nomoredomainsicu.ru', 'http://127.0.0.1:3000', 'http://localhost:3000'],
+    origin: ['https://barkhatos.nomoredomainsicu.ru', 'http://127.0.0.1:3000'],
     credentials: true,
     maxAge: 30,
   }),
@@ -33,6 +33,7 @@ mongoose.connect(MONGO_URL, {
 app.use(requestLogger);
 
 app.get('/crash-test', () => {
+  console.log('crash-test');
   setTimeout(() => {
     throw new Error('Сервер сейчас упадёт');
   }, 0);
