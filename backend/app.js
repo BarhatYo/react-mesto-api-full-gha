@@ -11,10 +11,10 @@ const NotFound = require('./utils/NotFound');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 
 const app = express();
-const { PORT = 3000 } = process.env;
+const { PORT = 3000, MONGO_URL = 'mongodb://127.0.0.1:/27017/mestodb' } = process.env;
 app.use(
   cors({
-    origin: ['https://barkhatos.nomoredomainsicu.ru', 'http://127.0.0.1:3000'],
+    origin: ['https://barkhatos.nomoredomainsicu.ru', 'http://127.0.0.1:3000', 'http://localhost:3000'],
     credentials: true,
     maxAge: 30,
   }),
@@ -23,7 +23,7 @@ app.use(
 app.use(express.json());
 app.use(cookieParser());
 
-mongoose.connect(process.env.MONGO_URL, {
+mongoose.connect(MONGO_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
