@@ -40,7 +40,6 @@ app.get('/crash-test', () => {
 });
 
 app.post('/signin', celebrate({
-  console.log('Login')
   body: Joi.object().keys({
     email: Joi.string().email().required().min(2),
     password: Joi.string().required(),
