@@ -30,14 +30,14 @@ mongoose.connect(MONGO_URL, {
   .then(() => console.log('Connected to MongoDB'))
   .catch((error) => console.error('Error connecting to MongoDB', error));
 
+app.use(requestLogger);
+
 app.get('/crash-test', () => {
   console.log('crash-test');
   setTimeout(() => {
     throw new Error('Сервер сейчас упадёт');
   }, 0);
 });
-
-app.use(requestLogger);
 
 app.post('/signin', celebrate({
   body: Joi.object().keys({
